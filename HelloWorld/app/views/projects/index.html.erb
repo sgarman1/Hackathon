@@ -7,18 +7,23 @@
         </h1>
       </div>
       <% @projects.each do |project| %>
+      <script>
+        var str = <%= project.project_name %>;
+        var id= str.replace(/\s/g, '');
+        
+      </script>
       <ul class="list-group">
-        <li class="list-group-item">
+        <li class="list-group-item customerName" type="button" data-toggle="collapse" data-target="#<%= project.project_name %>" aria-expanded="false" aria-controls="collapseExample">
           <span class="badge" ><%= project.project_hours %></span>
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <%= project.project_name %>
-          </button>
-          <div class="collapse" id="collapseExample">
-          <div class="well">
-            hello world
-          </div>
+           <b><%= project.project_name %></b> 
+          <div class="collapse" id="<%= project.project_name %>">
+           
+            <div class="data1">
+              John D. (10) </br> Jimmy F. (10) </br> Jake B. (10) </br> Jimmy F. (10) </br> Jake B. (10)
+            </div>
           </div>
         </li>
+        
         <% end %>
         <li class="list-group-item">
           <hr>
