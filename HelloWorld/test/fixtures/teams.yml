@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  Users: MyString
+  username: MyString
+  Project: MyString
+  project_name: MyString
+  Task: MyString
+  task_name: MyString
+
+two:
+  team_name: MyString
+  Users: MyString
+  username: MyString
+  Project: MyString
+  project_name: MyString
+  Task: MyString
+  task_name: MyString
