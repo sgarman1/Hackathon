@@ -1,5 +1,42 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+      <div class="starter-template">
+        <h1>
+          Project Hours
+        </h1>
+      </div>
+      <% @projects.each do |project| %>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge" ><%= project.project_hours %></span>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <%= project.project_name %>
+          </button>
+          <div class="collapse" id="collapseExample">
+          <div class="well">
+            hello world
+          </div>
+          </div>
+        </li>
+        <% end %>
+        <li class="list-group-item">
+          <hr>
+          <div class="form-group">
+            <label>
+              New Project
+            </label>
+            <input type="text" class="form-control" placeholder="Engagement Manager">
+            <input type="text" class="form-control" placeholder="Project Name">
+            <a href="#" class="btn btn-default">Add</a>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+
+
+
 <h1>Listing Projects</h1>
 
 <table>
